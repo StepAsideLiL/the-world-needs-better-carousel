@@ -6,6 +6,7 @@ import { Square } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Providers from "@/components/providers/providers";
 import { ModeToggle } from "@/components/mode-toggle";
+import HeaderMenu from "@/components/header-menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,6 @@ export const metadata: Metadata = {
     default: "The World Needs Better Carousel",
   },
 };
-
-const headerMenus = [];
 
 export default function RootLayout({
   children,
@@ -35,11 +34,7 @@ export default function RootLayout({
                 <Square className="size-5 text-muted-foreground" />
               </Link>
 
-              {headerMenus.length !== 0 && (
-                <Separator orientation="vertical" className="h-10" />
-              )}
-
-              <nav></nav>
+              <HeaderMenu />
             </div>
 
             <ModeToggle />
