@@ -22,17 +22,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Link href={"/"} className="flex items-center">
-          <Square className="size-5 text-muted-foreground" />
-          <Square className="size-7" />
-          <Square className="size-5 text-muted-foreground" />
-        </Link>
+        <header className="container py-5 flex items-center gap-3">
+          <Link href={"/"} className="flex items-center">
+            <Square className="size-5 text-muted-foreground" />
+            <Square className="size-7" />
+            <Square className="size-5 text-muted-foreground" />
+          </Link>
 
-        {headerMenus.length !== 0 && (
-          <Separator orientation="vertical" className="h-10" />
-        )}
+          {headerMenus.length !== 0 && (
+            <Separator orientation="vertical" className="h-10" />
+          )}
 
-        <nav></nav>
+          <nav></nav>
+        </header>
 
         {children}
       </body>
